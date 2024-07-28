@@ -1,8 +1,8 @@
 <?php
-
 namespace src\Controllers;
 
 use src\Core\Controller;
+use src\Models\companyModel;
 
 class homeController extends Controller
 {
@@ -13,8 +13,15 @@ class homeController extends Controller
 
     function index() : void
     {
-        print $this->renderView("index.html", [
+        if($_SESSION["user"]){
+            $bd = (new companyModel)->search();
 
-        ]);
+            print $this->renderView("index.html", [
+                "userComp" => var_dump($bd) 
+            ]);
+
+        }else{
+
+        }
     }
 }
