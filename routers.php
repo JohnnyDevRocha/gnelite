@@ -11,11 +11,11 @@ try{
     router::get(BASE_URL, "homeController@index");
 
     router::group(['namespace' => 'Register'], function () {
-        router::get(BASE_URL, "loginController@index");
-        router::post(BASE_URL, "loginController@store");
+        router::get(BASE_URL.'/login', "loginController@index");
+        router::post(BASE_URL.'login', "loginController@store");
 
-        router::get(BASE_URL, "registerController@index");
-        router::post(BASE_URL, "registerController@store");
+        router::get(BASE_URL.'register', "registerController@index");
+        router::post(BASE_URL.'register', "registerController@store");
     });
     
 

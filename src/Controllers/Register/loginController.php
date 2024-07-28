@@ -1,5 +1,5 @@
 <?php
-namespace src\Controllers;
+namespace src\Controllers\Register;
 
 use src\Core\Controller;
 use src\Models\companyModel;
@@ -13,13 +13,16 @@ class loginController extends Controller
 
     function index() : void
     {
-        print $this->renderView("login.html", [
-        ]);
-
+        print $this->renderView("login.html", []);
     }
 
     function store() : void
     {
         
+    }
+
+    function userOut():void
+    {
+        unset($_SESSION["user"]);
     }
 }

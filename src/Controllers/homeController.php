@@ -13,11 +13,11 @@ class homeController extends Controller
 
     function index() : void
     {
-        if($_SESSION["user"]){
-            $bd = (new companyModel)->search();
+        if(!empty($_SESSION["user"])){
+            //$bd = (new companyModel)->search();
 
             print $this->renderView("index.html", [
-                "userComp" => var_dump($bd) 
+                //"userComp" => $bd
             ]);
 
         }else{

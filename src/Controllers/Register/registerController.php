@@ -1,5 +1,5 @@
 <?php
-namespace src\Controllers;
+namespace src\Controllers\Register;
 
 use src\Core\Controller;
 use src\Models\companyModel;
