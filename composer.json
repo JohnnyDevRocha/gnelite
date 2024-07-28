@@ -1,0 +1,19 @@
+{
+    "name": "pc/gn-elite",
+    "description": "Gerenciador de ordens de serviço para empresas",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Johnny V. Rocha"
+        }
+    ],
+    "require": {
+        "pecee/simple-router": "^5.4"
+    }
+}
