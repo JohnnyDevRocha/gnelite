@@ -4,7 +4,7 @@ namespace src\Controllers;
 use src\Core\Controller;
 use src\Models\companyModel;
 
-class registerController extends Controller
+class loginController extends Controller
 {
     function __construct()
     {
@@ -13,11 +13,13 @@ class registerController extends Controller
 
     function index() : void
     {
-        
+        print $this->renderView("login.html", [
+        ]);
+
     }
 
     function store() : void
     {
-
+        
     }
 }

@@ -8,9 +8,20 @@ router::setDefaultNamespace('src\Controllers');
 
 try{
 
-router::get(BASE_URL, "homeController@index");
+    router::get(BASE_URL, "homeController@index");
 
-router::start();
+    router::group(['namespace' => 'Register'], function () {
+        router::get(BASE_URL, "loginController@index");
+        router::post(BASE_URL, "loginController@store");
+
+        router::get(BASE_URL, "registerController@index");
+        router::post(BASE_URL, "registerController@store");
+    });
+    
+
+
+
+    router::start();
 
 }catch(Exception $e)
 {
