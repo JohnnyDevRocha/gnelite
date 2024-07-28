@@ -21,7 +21,7 @@ class homeController extends Controller
             ]);
 
         }else{
-
+            header("location: http://localhost:3000/login");
         }
     }
 }

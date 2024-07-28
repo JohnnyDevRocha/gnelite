@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-$_SESSION['user'] = 'user';
-
 define("BASE_URL", '/');
 
 define('DB_HOST', 'localhost');
